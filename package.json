@@ -1,6 +1,6 @@
 {
   "name": "copenhagen_theme_dordev",
-  "version": "1.1.0",
+  "version": "3.2.3",
   "repository": "git@github.com:boomspot/copenhagen_theme_dordev.git",
   "scripts": {
     "start": "concurrently -k -r 'rollup -c -w' 'wait-on script.js style.css && zcli themes:preview'",
