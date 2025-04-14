@@ -10,14 +10,14 @@
     {{/link}}
   </div>
 
-  <div class="nav-wrapper-desktop">
+  <div class="hidden md:hidden lg:inline-block border">
     <nav class="user-nav" id="user-nav" aria-label="{{t 'user_navigation'}}">
-      <ul class="user-nav-list">
-        <li>{{link 'community'}}</li>
-        <li>{{link 'new_request' class='submit-a-request'}}</li>
+      <ul class="flex list-none">
+        <li>{{link 'community' class='text-sm text-blue-600 hover:underline focus:underline active:underline pr-5 rtl:pr-0 rtl:pl-5'}}</li>
+        <li>{{link 'new_request' class='text-sm text-blue-600 hover:underline focus:underline active:underline pr-5 rtl:pr-0 rtl:pl-5 submit-a-request'}}</li>
         {{#unless signed_in}}
           <li>
-            {{#link "sign_in" class="sign-in"}}
+            {{#link "sign_in" class="text-sm text-blue-600 hover:underline focus:underline active:underline pr-5 rtl:pr-0 rtl:pl-5 sign-in"}}
               {{t 'sign_in'}}
             {{/link}}
           </li>
@@ -25,24 +25,24 @@
       </ul>
     </nav>
     {{#if signed_in}}
-      <div class="user-info dropdown">
-        <button class="dropdown-toggle" aria-haspopup="true">
+      <div class="relative inline-block text-left dropdown">
+        <button class="inline-flex items-center cursor-pointer dropdown-toggle" aria-haspopup="true">
           {{user_avatar class="user-avatar"}}
-          <span>
+          <span class="flex items-center">
             {{user_name}}
-            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="dropdown-chevron-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="ml-1 dropdown-chevron-icon" aria-hidden="true">
               <path fill="none" stroke="currentColor" stroke-linecap="round" d="M3 4.5l2.6 2.6c.2.2.5.2.7 0L9 4.5"/>
             </svg>
           </span>
         </button>
-        <div class="dropdown-menu" role="menu">
-          {{#my_profile role="menuitem"}}{{t 'profile'}}{{/my_profile}}
-          {{link "requests" role="menuitem"}}
-          {{#link "contributions" role="menuitem"}}{{t "activities"}}{{/link}}
-          {{contact_details role="menuitem"}}
-          {{change_password role="menuitem"}}
-          <div class="separator" role="separator"></div>
-          {{link "sign_out" role="menuitem"}}
+        <div class="absolute right-0 w-48 mt-2 bg-white border rounded-md shadow-lg dropdown-menu" role="menu">
+          {{#my_profile role="menuitem" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"}}{{t 'profile'}}{{/my_profile}}
+          {{link "requests" role="menuitem" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"}}
+          {{#link "contributions" role="menuitem" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"}}{{t "activities"}}{{/link}}
+          {{contact_details role="menuitem" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"}}
+          {{change_password role="menuitem" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"}}
+          <div class="border-t border-gray-200 my-1" role="separator"></div>
+          {{link "sign_out" role="menuitem" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"}}
         </div>
       </div>
     {{/if}}

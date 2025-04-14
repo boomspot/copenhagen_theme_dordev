@@ -1,0 +1,30 @@
+/* Dynamic navigation styles */
+.dynamic-nav-item {
+  &.feature-item {
+    a {
+      font-weight: 500;
+    }
+  }
+  
+  .badge-new,
+  .badge-beta {
+    display: inline-block;
+    font-size: 10px;
+    padding: 2px 4px;
+    border-radius: 3px;
+    margin-left: 4px;
+    font-weight: 600;
+    text-transform: uppercase;
+    vertical-align: middle;
+  }
+  
+  .badge-new {
+    background-color: #E5F7ED;
+    color: #007A3E;
+  }
+  
+  .badge-beta {
+    background-color: #EBF0FF;
+    color: #0057D8;
+  }
+}

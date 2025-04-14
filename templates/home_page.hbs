@@ -1,5 +1,50 @@
 <h1 class="visibility-hidden">{{ help_center.name }}</h1>
  <div class="div">
+  <!-- Navigation Menu Section -->
+  <div class="bg-white py-16">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <h2 class="text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl">Navigation Menu</h2>
+        <p class="mt-2 text-lg/8 text-gray-600">Browse our categories</p>
+      </div>
+      
+      <div class="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-2 xl:grid-cols-4">
+        <!-- Beauty Menu Section -->
+        <div class="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+          <h3 class="text-xl font-semibold text-gray-900">Beauty</h3>
+          <ul id="nav-beauty-items" class="mt-4 space-y-2">
+            <!-- Beauty items will be loaded here via JavaScript -->
+          </ul>
+        </div>
+        
+        <!-- Fitness Menu Section -->
+        <div class="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+          <h3 class="text-xl font-semibold text-gray-900">Fitness</h3>
+          <ul id="nav-fitness-items" class="mt-4 space-y-2">
+            <!-- Fitness items will be loaded here via JavaScript -->
+          </ul>
+        </div>
+        
+        <!-- Wellness Menu Section -->
+        <div class="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+          <h3 class="text-xl font-semibold text-gray-900">Wellness</h3>
+          <ul id="nav-wellness-items" class="mt-4 space-y-2">
+            <!-- Wellness items will be loaded here via JavaScript -->
+          </ul>
+        </div>
+        
+        <!-- Feature Menu Section -->
+        <div class="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+          <h3 class="text-xl font-semibold text-gray-900">Features</h3>
+          <ul id="nav-feature-items" class="mt-4 space-y-2">
+            <!-- Feature items will be loaded here via JavaScript -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Blog Section -->
   <div class="bg-white py-24 sm:py-32">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <div class="mx-auto max-w-2xl text-center">
@@ -128,3 +173,10 @@
     {{/if}}
   </section>
 </div>
+
+<script type="module">
+  import "graphql-navigation";
+</script>
+
+<!-- Add debug script for troubleshooting -->
+<script src="{{asset 'debug-graphql.js'}}"></script>
